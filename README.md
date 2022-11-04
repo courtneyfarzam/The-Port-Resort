@@ -1,5 +1,12 @@
 # Group-Project
 
-THIS IS GONNA BE AWESOME
+Models:
+Elham
 
-LIKE SUPER AWESOME
+
+Views:
+Jose
+
+Controllers:
+
+
