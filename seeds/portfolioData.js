@@ -1,4 +1,6 @@
-[
+const { Portfolio } = require('../models');
+
+const portfolioData = [
     {
         "full_name": "",
         "job_title": "",
@@ -22,3 +24,9 @@
         "project_description": ""
     }
 ]
+
+const seedPortfolio = () => {
+    Portfolio.bulkCreate(portfolioData);
+};
+
+module.exports = seedPortfolio;
