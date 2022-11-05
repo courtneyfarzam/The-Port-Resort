@@ -1,12 +1,11 @@
 # Group-Project
 
-Models:
-Elham
-
-
-Views:
-Jose
-
-Controllers:
-
-
+Config ✔️    
+Controllers     
+DB ✔️    
+Models ✔️    
+Public    
+Seeds - needs dummy data    
+Utils    
+Views    
+Server   
