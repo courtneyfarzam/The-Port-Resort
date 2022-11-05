@@ -8,7 +8,7 @@ Portfolio.init(
         id: {
             type: DataTypes.INTEGER,
             allowNull: false,
-            primanyKey: true,
+            primaryKey: true,
             autoIncrement: true
         },
 
