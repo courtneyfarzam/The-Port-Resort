@@ -45,7 +45,7 @@ router.get('/', async (req, res) => {
 
 router.get('/:id', async (req, res) => {
     try {
-        const portfolioData = await findByPk({
+        const portfolioData = await findOne({
             where: {
                 id: req.params.id
             },

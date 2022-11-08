@@ -1,6 +1,5 @@
 const router = require('express').Router();
 const { User, Portfolio } = require('../../models');
-const { findByPk } = require('../../models/user');
 const withAuth = require('../../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -22,7 +21,7 @@ router.get('/', async (req, res) => {
 
 router.get('/:id', async (req, res) => {
     try {
-        const userData = await findByPk({
+        const userData = await User.findOne({
             where: {
                 id: req.params.id
             },
@@ -117,17 +116,13 @@ router.post('/login', async (req, res) => {
 });
 
 router.post('/logout', async (req, res) => {
-    try {
-        if (req.session.logged_in) {
-            await req.session.destroy(()=> {
-                res.status(200).end();
-            })
-        } else {
-            res.status(400).end();
-        }
-
-    } catch(err) {
-        res.status(500).end();
+    
+    if (req.session.logged_in) {
+        await req.session.destroy(()=> {
+            res.status(200).end();
+        })
+    } else {
+        res.status(400).end();
     }
 });
 
