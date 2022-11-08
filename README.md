@@ -1,11 +1,11 @@
 # Group-Project
 
 Config ✔️    
-Controllers     
+Controllers   - wont be able to test until views are completed  
 DB ✔️    
 Models ✔️    
-Public    
-Seeds - needs dummy data    
-Utils    
-Views    
-Server   
+Public    - needs js and css
+Seeds - will need to delete user dummy data   
+Utils   -needs work on helpers 
+Views   -workign on seperate file to get views then copy paste 
+Server  ✔️ 

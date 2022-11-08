@@ -92,7 +92,7 @@ router.get('/:id', async (req, res) => {
 
         res.status(200).json(portfolioData)
     } catch(err) {
-        res.status(500).json(err);
+        res.status(500).json({message: 'check line 95 pr'});
     }
 });
 
@@ -154,7 +154,7 @@ router.delete('/:id', withAuth, async (req, res) => {
         res.status(200).json(portfolioData);
 
     } catch(err) {
-        res.status(500).json(err);
+        res.status(500).json({message: 'check line 157 pr'});
     }
 });
 

@@ -5,17 +5,13 @@ const withAuth = require('../../utils/auth');
 router.get('/', async (req, res) => {
     try {
         const userData = await User.findAll({
-            include:[{
-                model: 'user',
-                key: 'id'
-            }],
             attributes: {exclude: ['password']}
         });
 
         res.status(200).json(userData);
 
     } catch(err) {
-        res.status(500).json(err);
+        res.status(500).json({message: 'check line 18 ur'});
     }
 });
 
@@ -64,7 +60,7 @@ router.get('/:id', async (req, res) => {
         res.status(200).json(userData);
 
     } catch(err) {
-        res.status(500).json(err);
+        res.status(500).json({message: 'check line 67 ur'});
     }
 });
 
@@ -83,7 +79,7 @@ router.post('/', async (req, res) => {
     }
 });
 
-router.post('/login', async (req, res) => {
+router.post('/login', withAuth, async (req, res) => {
     try {
         const userData = await User.findOne({
             where: {
@@ -111,7 +107,7 @@ router.post('/login', async (req, res) => {
         });
 
     } catch(err) {
-        res.status(500).json(err);
+        res.status(500).json({message: 'check line 114 ur'});
     }
 });
 
