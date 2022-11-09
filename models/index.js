@@ -7,7 +7,7 @@ User.hasMany(Portfolio, {
 });
 
 Portfolio.belongsTo(User, {
-    foreignKey: 'user_id',
+    foreignKey: 'id',
 });
 
 module.exports = { User, Portfolio }
