@@ -1,0 +1,100 @@
+{{#each portfolio as |portfolio|}}
+<div class="table-div row">
+    <div class="col s12 m7 card-div">
+        <div class="card">
+            <div class="card-content">
+                <table>
+                    <tbody>
+                        <div class="divider"></div>
+                        <tr>
+                            <td class="td-label"><b>Full Name</b></td>
+                            <td>{{portfolio.full_name}}</td>
+                        </tr>
+                        <tr>
+                            <td><b>Job Title</b></td>
+                            <td>{{portfolio.job_title}}</td>
+                        </tr>
+                        <tr>
+                            <td><b>About</b></td>
+                            <td>{{portfolio.about}}</td>
+                            </tr>
+                        <tr>
+                            <td><b>Phone</b></td>
+                            <td>{{portfolio.phone}}</td>
+                        </tr>
+                        <tr>
+                            <td><b>Country</b></td>
+                            <td>{{portfolio.country}}</td>
+                        </tr>
+                        <tr>
+                            <td><b>City</b></td>
+                            <td>{{portfolio.city}}</td>
+                        </tr>
+                        <tr>
+                            <td><b>LinkedIn</b></td>
+                            <td>{{portfolio.linkedin}}</td>
+                        </tr>
+                        <tr>
+                            <td><b>GitHub</b></td>
+                            <td>{{portfolio.github}}</td>
+                        </tr>
+                        <tr>
+                            <td><b>School</b></td>
+                            <td>{{portfolio.school}}</td>
+                        </tr>
+                        <tr>
+                            <td><b>Course</b></td>
+                            <td>{{portfolio.course}}</td>
+                        </tr>
+                        <tr>
+                            <td><b>Graduation Date</b></td>
+                            <td>{{portfolio.graduation_date}}</td>
+                        </tr>
+                        <tr>
+                            <td><b>Role</b></td>
+                            <td>{{portfolio.role}}</td>
+                        </tr>
+                        <tr>
+                            <td><b>Company</b></td>
+                            <td>{{portfolio.phone}}</td>
+                        </tr>
+                        <tr>
+                            <td><b>Location</b></td>
+                            <td>{{portfolio.location}}</td>
+                        </tr>
+                        <tr>
+                            <td><b>Start Date</b></td>
+                            <td>{{portfolio.job_starting}}</td>
+                        </tr>
+                        <tr>
+                            <td><b>End Date</b></td>
+                            <td>{{portfolio.job_ending}}</td>
+                        </tr>
+                        <tr>
+                            <td><b>Job Description</b></td>
+                            <td>{{portfolio.job_description}}</td>
+                        </tr>
+                        <tr>
+                            <td><b>Project Name</b></td>
+                            <td>{{portfolio.project_name}}</td>
+                        </tr>
+                        <tr>
+                            <td><b>Repository</b></td>
+                            <td>{{portfolio.repository}}</td>
+                        </tr>
+                        <tr>
+                            <td><b>Project Description</b></td>
+                            <td>{{portfolio.project_description}}</td>
+                        </tr>
+                    </tbody>
+                    </table>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+
+    <div class="buttons-profile">
+        <button type="submit" class="btn profile-btn">Edit Info</button>
+        <button type="submit" class="btn profile-btn">View Profile</button>
+    </div>
+</div>

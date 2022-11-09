@@ -4,7 +4,7 @@ const { User, Portfolio } = require('../models');
 
 router.get('/', async (req, res) => {
     try {
-        const portfolioData = await Portfolio.findAll ({
+        const portfolioData = await Portfolio.findAll({
             attributes: [
                 'id', 
                 'full_name', 
@@ -36,7 +36,12 @@ router.get('/', async (req, res) => {
                 }
             ]
         });
-res.json(portfolioData)
+
+        const portfolio = portfolioData.map(portfolio => portfolio.get({ plain: true }))
+        console.log(portfolio)
+        res.render('homepage', {
+            portfolio
+        })
     } catch(err) {
         res.status(500).json({message: 'check line 43 hr'});
     }
