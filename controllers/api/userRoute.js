@@ -1,4 +1,5 @@
 const router = require('express').Router();
+//remove port possible
 const { User, Portfolio } = require('../../models');
 const withAuth = require('../../utils/auth');
 
@@ -21,46 +22,19 @@ router.get('/:id', async (req, res) => {
             where: {
                 id: req.params.id
             },
-            attributes: {exclude: [password]},
-            include: [
-                {
-                    model: Portfolio,
-                    attributes: [
-                        'id', 
-                        'full_name', 
-                        'job_title', 
-                        'about',
-                        'phone',
-                        'country',
-                        'city',
-                        'linkedin',
-                        'github',
-                        'school',
-                        'course',
-                        'graduation_date',
-                        'role',
-                        'company',
-                        'location',
-                        'job_starting',
-                        'job_ending',
-                        'job_description',
-                        'project_name',
-                        'repository',
-                        'project_description'
-                    ]
-                }
-            ]
-        });
+            attributes: {
+                exclude: ['password']
+            }
+        })
 
-        if (!userData) {
-            res.status(404).json({message: 'No user found!'});
+        if(!userData) {
+            res.status(404).json({message: 'No user found'});
             return;
-        };
+        }
 
-        res.status(200).json(userData);
-
-    } catch(err) {
-        res.status(500).json({message: 'check line 67 ur'});
+        res.status(200).json(userData)
+    } catch (err) {
+        res.status(500).json(err)
     }
 });
 
