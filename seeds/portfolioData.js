@@ -21,7 +21,8 @@ const portfolioData = [
         "job_description": "rub the muscles with oil ",
         "project_name": "dont ask dont tell",
         "repository": "check yourself",
-        "project_description": "keep my fucking wifes name out ya motherfucking mouf -will smith"
+        "project_description": "keep my fucking wifes name out ya motherfucking mouf -will smith",
+        "user_id": 1
     },
     {
         "full_name": "yooo",
