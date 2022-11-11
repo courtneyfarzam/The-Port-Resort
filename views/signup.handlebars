@@ -1,30 +1,38 @@
 <div class="login row">
-    <form class="col-s12 login-form">
+    <form class="col-s12 signup-form">
         <div class="row">
             <div class="input-field col s6">
-                <input type="text" id="full-name" class="validate">
+                <input type="text" id="full-name-signup" class="validate">
                 <label for="full-name-signup">Full Name</label>
             </div>
         </div>
 
         <div class="row">
             <div class="input-field col s6">
-                <input type="text" id="email-login" class="validate">
-                <label for="email-login">Email</label>
+                <input type="text" id="email-signup" class="validate">
+                <label for="email-signup">Email</label>
             </div>
         </div>
 
         <div class="row">
             <div class="input-field col s6">
-                <input type="text" id="password-login" class="validate">
-                <label for="password-login">Password</label>
+                <input type="password" id="password-signup" class="validate">
+                <label for="password-signup">Password</label>
             </div>
         </div>
 
-        <button type="submit" class="btn login-btn">Submit</button>
+        <div class="row">
+            <div class="input-field col s6">
+                <input type="text" id="github-signup" class="validate">
+                <label for="github-signup">GitHub</label>
+            </div>
+        </div>
+        
+        <div class="buttons-profile">
+                <button type="submit" class="btn signup-btn">Sign up</button>
+        </div>
     </form>
 </div>
-<div class="buttons-profile">
-        <button type="submit" class="btn signup-btn">Login</button>
-        <button type="submit" class="btn signup-btn">Sign up</button>
-    </div>
+
+
+<script src="../public/js/signup.js"></script>

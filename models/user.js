@@ -20,6 +20,10 @@ User.init(
         type: DataTypes.STRING,
         allowNull: false,
       },
+      github: {
+        type: DataTypes.STRING,
+        allowNull: true
+    },
       email: {
         type: DataTypes.STRING,
         allowNull: false,

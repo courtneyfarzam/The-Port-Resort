@@ -44,6 +44,8 @@ router.post('/', async (req, res) => {
 
         req.session.save(() => {
             req.session.user_id = userData.id;
+            req.session.full_name = userData.fullName;
+            req.session.github = userData.github;
             req.session.logged_in = true;
 
             res.status(200).json(userData);
@@ -62,14 +64,14 @@ router.post('/login', withAuth, async (req, res) => {
         });
 
         if (!userData) {
-            res.status(400).json({message: 'Incorrect email or password. Please try again'});
+            res.status(400).json({message: 'Incorrect email. Please try again'});
             return;
         }
 
         const checkPassword = await User.checkPassword(req.body.password)
 
         if (!checkPassword) {
-            res.status(400).json({message: 'Incorrect email or password. Please try again'});
+            res.status(400).json({message: 'Incorrect password. Please try again'});
             return;
         }
 
