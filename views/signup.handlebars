@@ -1,29 +1,30 @@
-<div class="table-div row">
-    <div class="col s12 m7 card-div">
-        <div class="card">
-            <div class="card-content">
-                <table>
-                    <tbody>
-                        <div class="divider"></div>
-                        <tr>
-                            <td class="td-label"><b>Username</b></td>
-                            <td><input></input></td>
-                        </tr>
-                        <tr>
-                            <td><b>Email</b></td>
-                            <td><input></input></td>
-                            </tr>
-                        <tr>
-                            <td><b>Password</b></td>
-                            <td><input></input></td>
-                            </tr>
-                       
-                    </tbody>
-                    </table>
+<div class="login row">
+    <form class="col-s12 login-form">
+        <div class="row">
+            <div class="input-field col s6">
+                <input type="text" id="full-name" class="validate">
+                <label for="full-name-signup">Full Name</label>
             </div>
         </div>
-    </div>
+
+        <div class="row">
+            <div class="input-field col s6">
+                <input type="text" id="email-login" class="validate">
+                <label for="email-login">Email</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s6">
+                <input type="text" id="password-login" class="validate">
+                <label for="password-login">Password</label>
+            </div>
+        </div>
+
+        <button type="submit" class="btn login-btn">Submit</button>
+    </form>
+</div>
 <div class="buttons-profile">
-        <button type="submit" class="btn profile-btn">Login</button>
-        <button type="submit" class="btn profile-btn">Sign up</button>
+        <button type="submit" class="btn signup-btn">Login</button>
+        <button type="submit" class="btn signup-btn">Sign up</button>
     </div>
