@@ -1,0 +1,51 @@
+.dashboard {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.div-wrapper {
+    width: 40%;
+    padding-left: 4rem;
+    margin-top: 3rem;
+}
+
+.div-wrapper-two {
+    width: 40%;
+    padding-left: 4rem;
+    margin-top: 3rem;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-top: 2rem;
+}
+
+.buttons-profile {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    padding-left: 6rem;
+    padding-top: 1rem;
+    left: 60rem;
+    position: fixed;
+}
+
+.profile-btn {
+    margin-top: 2rem;
+}
+
+td {
+    vertical-align: top;
+}
+
+.td-label {
+    width: 20%;
+}
+
+.card-div {
+    margin-top: 2rem;
+}
