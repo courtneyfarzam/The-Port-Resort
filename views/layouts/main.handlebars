@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PORTFOLIO GENERATOR</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 <body>
     <header>
@@ -17,7 +17,7 @@
                 {{#if logged_in}}
                 <li><a href="/">Home</a></li>
                 <li><a href="/profile">Profile</a></li>
-                <li><a id="logout" href="#">Logout</a></li>
+                <li><a id="logout" href="/logout">Logout</a></li>
                 {{else}}
                 <li><a href="/">Home</a></li>
                 <li><a href="/login">Login</a></li>

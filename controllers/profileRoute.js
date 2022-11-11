@@ -1,10 +1,13 @@
 const router = require('express').Router();
 const { User, Portfolio } = require('../models');
 const withAuth = require('../utils/auth');
-//wont work unless logged in 
+
 router.get('/', withAuth, async (req, res) => {
     try {
         const portfolioData = await Portfolio.findAll ({
+            where: {
+                user_id: req.session.user_id
+            },
             attributes: [
                 'id', 
                 'full_name', 
@@ -28,7 +31,6 @@ router.get('/', withAuth, async (req, res) => {
                 'repository',
                 'project_description'
             ],
-
             include: [
                 {
                     model: User,
@@ -36,9 +38,14 @@ router.get('/', withAuth, async (req, res) => {
                 }
             ]
         });
-//for the render of page
-         const Portfolio = portfolioData.map(post => post.get({ plain: true }));
-        res.json(portfolioData)
+
+        const portfolio = portfolioData.map(post => post.get({ plain: true }));
+
+        res.render('profile', {
+            portfolio,
+            logged_in: req.session.logged_in
+        });
+
     } catch(err) {
         res.status(500).json({messgae: 'check line 43 dbr'});
     }
@@ -46,52 +53,53 @@ router.get('/', withAuth, async (req, res) => {
 
 router.get('/edit/:id', withAuth, async (req, res) => {
     try {
-        const portfolioData = await Portfolio.findOne ({
-                 where: {
-                    id: req.body.user_id
-                 },
-                 include: [
-                    {
-                        model: Portfolio,
-                        attributes: [
-                            'id', 
-                            'full_name', 
-                            'job_title', 
-                            'about',
-                            'phone',
-                            'country',
-                            'city',
-                            'linkedin',
-                            'github',
-                            'school',
-                            'course',
-                            'graduation_date',
-                            'role',
-                            'company',
-                            'location',
-                            'job_starting',
-                            'job_ending',
-                            'job_description',
-                            'project_name',
-                            'repository',
-                            'project_description'
-                        ]
-                    }
-                 ],
-                 include: [
-                    {
-                        model: User,
-                        attributes: ['name']
-                    }
-                 ]
+        const updatedPortfolio = await Portfolio.findOne ({
+            where: {
+            id: req.body.user_id
+            },
+            attributes: [
+                'id', 
+                'full_name', 
+                'job_title', 
+                'about',
+                'phone',
+                'country',
+                'city',
+                'linkedin',
+                'github',
+                'school',
+                'course',
+                'graduation_date',
+                'role',
+                'company',
+                'location',
+                'job_starting',
+                'job_ending',
+                'job_description',
+                'project_name',
+                'repository',
+                'project_description'
+            ],
+            include: [
+            {
+                model: User,
+                attributes: ['name']
+            }
+            ]
         });
 
-        if(!portfolioData) {
-            res.status(400).json({message: 'No poertfolio to edit'});
+        if(!updatedPortfolio) {
+            res.status(400).json({message: 'No portfolio to edit'});
             return;
         }
 
-        res.status(200).json(portfolioData)
+        const portfolio = updatedPortfolio.get({ plain: true });
+
+        res.render('edit', {
+            portfolio,
+            logged_in: req.session.logged_in
+        })
+
     } catch(err) {
         res.status(500).json({message: 'check line 96 dbr'});
     }
@@ -134,10 +142,10 @@ router.get('/create', async (req, res) => {
             ]
         })
 
-        const newPost = createPort.map(post => post.get({ plain: true }));
+        const newPortfolio = createPort.map(post => post.get({ plain: true }));
 
-        res.render('create-post', {
-            newPost,
+        res.render('create', {
+            newPortfolio,
             logged_in: req.session.logged_in
         })
 
