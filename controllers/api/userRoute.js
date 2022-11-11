@@ -1,5 +1,4 @@
 const router = require('express').Router();
-//remove port possible
 const { User, Portfolio } = require('../../models');
 const withAuth = require('../../utils/auth');
 
@@ -24,7 +23,35 @@ router.get('/:id', async (req, res) => {
             },
             attributes: {
                 exclude: ['password']
-            }
+            },
+            include: [
+                {
+                    model: Portfolio,
+                    attributes: [
+                        'id', 
+                        'full_name', 
+                        'job_title', 
+                        'about',
+                        'phone',
+                        'country',
+                        'city',
+                        'linkedin',
+                        'github',
+                        'school',
+                        'course',
+                        'graduation_date',
+                        'role',
+                        'company',
+                        'location',
+                        'job_starting',
+                        'job_ending',
+                        'job_description',
+                        'project_name',
+                        'repository',
+                        'project_description'
+                    ]
+                },
+            ]
         })
 
         if(!userData) {
@@ -40,11 +67,16 @@ router.get('/:id', async (req, res) => {
 
 router.post('/', async (req, res) => {
     try {
-        const userData = await User.create(req.body);
+        const userData = await User.create({
+            name: req.body.fullName,
+            github: req.body.github,
+            email: req.body.email,
+            password: req.body.password
+        });
 
         req.session.save(() => {
             req.session.user_id = userData.id;
-            req.session.full_name = userData.fullName;
+            req.session.full_name = userData.name;
             req.session.github = userData.github;
             req.session.logged_in = true;
 
@@ -90,7 +122,7 @@ router.post('/login', withAuth, async (req, res) => {
 router.post('/logout', async (req, res) => {
     
     if (req.session.logged_in) {
-        await req.session.destroy(()=> {
+        req.session.destroy(()=> {
             res.status(200).end();
         })
     } else {

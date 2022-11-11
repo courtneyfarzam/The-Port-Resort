@@ -102,7 +102,6 @@ router.post('/', withAuth, async (req, res) => {
             ...req.body,
             user_id: req.session.user_id
         }) 
-        // ******DOES THIS WORK?******** //
 
         res.status(200).json(newPortfolio);
     } catch(err) {
@@ -123,14 +122,13 @@ router.put('/:id', withAuth, async (req, res) => {
                 }
             }
         );
-        // ******DOES THIS WORK?******** //
 
         if (!updatePortfolio) {
             res.status(400).json({message: 'No portfolio found'});
             return;
         }
 
-        res.status(200).json(newPortfolio);
+        res.status(200).json(updatedPortfolio);
 
     } catch(err) {
         res.status(500).json(err);

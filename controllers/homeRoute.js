@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { User, Portfolio } = require('../models');
-// const withAuth = require('../utils/auth');
+
 
 router.get('/', async (req, res) => {
     try {
@@ -38,7 +38,7 @@ router.get('/', async (req, res) => {
         });
 
         const portfolio = portfolioData.map(portfolio => portfolio.get({ plain: true }))
-        console.log(portfolio)
+
         res.render('homepage', {
             portfolio
         })
@@ -49,20 +49,20 @@ router.get('/', async (req, res) => {
 
 //we need to add in render for login page :)
 router.get('/login', async (req, res) => {
-   if(req.session.logged_in) {
-    res.redirect('/profile')
-    return;
-   }
-   res.render('login')
+    if(req.session.logged_in) {
+        res.redirect('/profile')
+        return;
+    }
+    res.render('login')
 });
 
 //connection should work after page
 router.get('/signup', async (req, res) => {
-   if(req.session.logged_in) {
-    res.redirect('/')
-    return;
-   }
-   res.render('signup')
+    if(req.session.logged_in) {
+        res.redirect('/')
+        return;
+    }    
+    res.render('signup')
 });
 //connection works needs to have page for render
 router.get('/portfolio/:id', async (req, res) => {
@@ -93,14 +93,14 @@ router.get('/portfolio/:id', async (req, res) => {
             'project_name',
             'repository',
             'project_description'
-        ],
-        include: {
-            model: User,
-            attributes: [
-                'name',
-                'email'
-            ]
-          }
+            ],
+            include: {
+                model: User,
+                attributes: [
+                    'name',
+                    'email'
+                ]
+            }
         });
 
         if(!singlePort) {
@@ -109,7 +109,7 @@ router.get('/portfolio/:id', async (req, res) => {
         }
         const port = singlePort.get({plain: true});
 
-        res.render('homepage', {
+        res.render('single-post', {
             port,
             logged_in: req.session.logged_in
         })
