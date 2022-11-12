@@ -12,4 +12,5 @@ Server  ✔️
 
 add more then 1 job
 use github api for displaying project
+need to add name="whatever" to inputs in edit.handlebars
 
