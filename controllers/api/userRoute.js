@@ -100,7 +100,7 @@ router.post('/login', withAuth, async (req, res) => {
             return;
         }
 
-        const checkPassword = await User.checkPassword(req.body.password)
+        const checkPassword = await userData.checkPassword(req.body.password)
 
         if (!checkPassword) {
             res.status(400).json({message: 'Incorrect password. Please try again'});
