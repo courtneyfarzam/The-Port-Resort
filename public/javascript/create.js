@@ -57,7 +57,7 @@ const createPort = async (event) => {
         alert(response.status.text);
     }
 }
-document.querySelector('.create-about-form').addEventListener('submit', createPort)
-document.querySelector('.create-education-form').addEventListener('submit', createPort)
-document.querySelector('.create-work-form').addEventListener('submit', createPort)
-document.querySelector('.create-project-form').addEventListener('submit', createPort)
+document.querySelector('.edit-btn').addEventListener('click', createPort)
+// document.querySelector('.create-education-form').addEventListener('submit', createPort)
+// document.querySelector('.create-work-form').addEventListener('submit', createPort)
+// document.querySelector('.create-project-form').addEventListener('submit', createPort)
