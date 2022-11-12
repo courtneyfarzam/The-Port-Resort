@@ -1,5 +1,3 @@
-const { text } = require("express");
-
 const createPort = async (event) => {
     event.preventDefualt();
 
@@ -54,7 +52,7 @@ const createPort = async (event) => {
     });
 
     if (response.ok){
-        document.location.replace('/portfolio');
+        document.location.replace('/create');
     } else {
         alert(response.status.text);
     }
