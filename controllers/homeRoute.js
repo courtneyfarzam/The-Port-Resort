@@ -40,7 +40,8 @@ router.get('/', async (req, res) => {
         const portfolio = portfolioData.map(portfolio => portfolio.get({ plain: true }))
 
         res.render('homepage', {
-            portfolio
+            portfolio,
+            logged_in: req.session.logged_in
         })
     } catch(err) {
         res.status(500).json({message: 'check line 43 hr'});
@@ -50,7 +51,7 @@ router.get('/', async (req, res) => {
 //we need to add in render for login page :)
 router.get('/login', async (req, res) => {
     if(req.session.logged_in) {
-        res.redirect('/profile')
+        res.redirect('/')
         return;
     }
     res.render('login')
