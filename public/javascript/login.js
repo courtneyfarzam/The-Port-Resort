@@ -5,7 +5,7 @@ const login = async (event) => {
     const password = document.querySelector('#password-login').value.trim();
 
     if (email && password) {
-        const response = await fetch(`/api/user/login`, {
+        const response = await fetch(`/api/users/login`, {
             method: 'POST',
             body: JSON.stringify({
                 email,
@@ -17,8 +17,7 @@ const login = async (event) => {
         });
 
         if (response.ok) {
-            console.log(response)
-            document.location.replace('/profile');
+            document.location.replace('/dashboard');
         } else {
             alert('Login Failed')
         }

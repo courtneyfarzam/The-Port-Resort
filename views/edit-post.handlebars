@@ -1,0 +1,28 @@
+<div class="post-input">
+    <a href="/dashboard" class="dashboard-back">&larr; Back to Dashboard</a>
+    <h2 class="title-edit">Edit Blog Post</h2>
+
+    <form class="edit-post">
+        <div class="port-name">
+            <label for="name">Name:</label>
+            <input type="text" name="name" class="name" value="{{post.name}}">
+        </div>
+
+        <div class="port-job">
+            <label for="job_title">Job Title:</label>
+            <input type="text" name="job_title" class="job-title" value="{{post.job_title}}">
+        </div>
+
+        <div class="port-about">
+            <label for="about">About:</label>
+            <input type="text" name="about" class="about" value="{{post.about}}">
+        </div>
+
+
+        <button type="submit" class="btn publish-btn">Save Changes</button>
+        <button type="delete" class="btn delete-btn">Delete</button>
+    </form>
+</div>
+
+<script src="/javascript/editPost.js"></script>
+<script src="/javascript/deletePost.js"></script>

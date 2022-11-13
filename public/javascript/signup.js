@@ -1,16 +1,16 @@
 const signup = async (event) => {
     event.preventDefault();
 
-    const fullName = document.querySelector('#full-name-signup').value.trim();
+    const name = document.querySelector('#name-signup').value.trim();
     const github = document.querySelector('#github-signup').value.trim();
     const email = document.querySelector('#email-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();
 
-    if (fullName && email && password && github) {
-        const response = await fetch('/api/user', {
+    if (name && email && password) {
+        const response = await fetch('/api/users', {
             method: 'POST',
             body: JSON.stringify({
-                fullName,
+                name,
                 github,
                 email,
                 password
@@ -21,7 +21,7 @@ const signup = async (event) => {
         });
 
         if (response.ok) {
-            document.location.replace('/profile');
+            document.location.replace('/dashboard');
         } else {
             alert(response.statusText)
         }
