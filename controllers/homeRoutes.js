@@ -1,12 +1,12 @@
 const router = require('express').Router();
 const sequelize= require('../config/connection');
-const { User, Post, Comment } = require('../models');
+const { User, Post } = require('../models');
 
 
 router.get('/', async (req, res) => {
     try {
         const postData = await Post.findAll({
-            attributes: ['id', 'name', 'job_title', 'about'],
+            attributes: ['id', 'name', 'job_title', 'about', 'github'],
             include: [
                 {
                     model: User,
@@ -51,13 +51,13 @@ router.get('/signup', async (req, res) => {
 });
 
 
-router.get('/post/:id', async (req, res) => {
+router.get('/:github', async (req, res) => {
     try {
         const singlePost = await Post.findOne({
             where: {
-                id: req.params.id
+                github: req.params.github
             },
-            attributes: ['id', 'name', 'job_title', 'about'],
+            attributes: ['id', 'name', 'job_title', 'about', 'github'],
             include: [
                 {
                     model: User,
@@ -73,13 +73,15 @@ router.get('/post/:id', async (req, res) => {
 
         const post = singlePost.get({ plain: true });
 
-        res.render('single-post', {
+        res.render('portfolio', {
             post,
+            layout: 'portfolio',
             logged_in: req.session.logged_in
         })
     } catch (err) {
         res.status(500).json(err)
     }
 });
+
 
 module.exports = router;

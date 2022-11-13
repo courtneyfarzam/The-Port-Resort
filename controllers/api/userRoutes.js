@@ -25,7 +25,7 @@ router.get('/:id', async (req, res) => {
                 {
                     model: Post,
                     attributes: [
-                        'id', 'name', 'job_title', 'about'
+                        'id', 'name', 'job_title', 'about', 'github'
                     ]
                 },
             ]
