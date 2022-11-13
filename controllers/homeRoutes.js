@@ -50,13 +50,13 @@ router.get('/signup', async (req, res) => {
     
 });
 
-router.get('/post/:id', async (req, res) => {
+router.get('/post/:github', async (req, res) => {
     try {
         const singlePost = await Post.findOne({
             where: {
-                id: req.params.id
+                github: req.params.github
             },
-            attributes: ['id', 'name', 'job_title', 'about'],
+            attributes: ['id', 'name', 'job_title', 'about', 'github'],
             include: [
                 {
                     model: User,
