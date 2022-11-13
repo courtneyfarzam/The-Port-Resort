@@ -9,7 +9,7 @@ router.get('/', withAuth, async (req, res) => {
             where: {
                 user_id: req.session.user_id
             },
-            attributes: ['id', 'name', 'job_title', 'about'],
+            attributes: ['id', 'name', 'job_title', 'about', 'github'],
             include: [
                 {
                     model: User,
@@ -36,7 +36,7 @@ router.get('/edit/:id', withAuth, async (req, res) => {
             where: {
                 id: req.params.id
             },
-            attributes: ['id', 'name', 'job_title', 'about'],
+            attributes: ['id', 'name', 'job_title', 'about', 'github'],
             include: [
                 {
                     model: User,
@@ -68,7 +68,7 @@ router.get('/create', withAuth, async (req, res) => {
             where: {
                 user_id: req.session.user_id
             },
-            attributes: ['name', 'job_title', 'about'],
+            attributes: ['name', 'job_title', 'about', 'github'],
             include: [
                 {
                     model: User,
@@ -90,34 +90,6 @@ router.get('/create', withAuth, async (req, res) => {
 });
 
 
-router.get('/:id', async (req, res) => {
-    try {
-        const renderPortfolio = await Post.findOne({
-            where: {
-                id: req.params.id
-            },
-            attributes:['id', 'name', 'job_title', 'about'],
-            include: [
-                {
-                    model: User,
-                    attributes: ['name', 'github']
-                }
-            ]
-        });
 
-        if (!renderPortfolio) {
-            res.status(404).json({message:'No portfolio found.'})
-            return;
-        }
-
-        const portfolio = renderPortfolio.get({ plain:true });
-        res.render('portfolio', {layout:'portfolio'}, {
-            portfolio
-        }) 
-
-    } catch (err) {
-        res.status(500).json(err) 
-    }
-});
 
 module.exports = router;

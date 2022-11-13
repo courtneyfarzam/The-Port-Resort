@@ -23,6 +23,10 @@ Post.init(
             type: DataTypes.TEXT,
             allowNull: false,
         },
+        github: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
         user_id: {
             type: DataTypes.INTEGER,
             references: {

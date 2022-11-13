@@ -6,7 +6,7 @@ const withAuth = require('../../utils/auth');
 router.get('/', async (req, res) => {
     try {
         const postData = await Post.findAll({
-            attributes: ['id', 'name', 'job_title', 'about'],
+            attributes: ['id', 'name', 'job_title', 'about', 'github'],
             include: [
                 {
                     model: User,
@@ -26,7 +26,7 @@ router.get('/:id', async (req, res) => {
             where: {
                 id: req.params.id
             },
-            attributes: ['id', 'name', 'job_title', 'about'],
+            attributes: ['id', 'name', 'job_title', 'about', 'github'],
             include: [
                 {
                     model: User,
@@ -53,6 +53,7 @@ router.post('/', withAuth, async (req, res) => {
             name: req.body.name,
             job_title: req.body.job_title,
             about: req.body.about,
+            github: req.body.github,
             user_id: req.session.user_id
         });
         
@@ -69,7 +70,8 @@ router.put('/:id', withAuth, async (req, res) => {
             {
                 name: req.body.name,
                 job_title: req.body.job_title,
-                about: req.body.about
+                about: req.body.about,
+                github: req.body.github,
             },
             {
                 where: {

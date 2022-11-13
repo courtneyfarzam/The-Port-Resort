@@ -4,6 +4,7 @@ const editPost = async (event) => {
     const name = document.querySelector('input[name="name"]').value;
     const job_title = document.querySelector('input[name="job_title"]').value;
     const about = document.querySelector('input[name="about"]').value;
+    const github = document.querySelector('input[name="github"]').value;
     const id = window.location.toString().split('/')[window.location.toString().split('/').length - 1];
 
     const response = await fetch(`/api/posts/${id}`, {
@@ -11,7 +12,8 @@ const editPost = async (event) => {
         body: JSON.stringify({
             name,
             job_title,
-            about
+            about,
+            github
         }),
         headers: {
             'Content-Type': 'application/json'
