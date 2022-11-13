@@ -1,13 +1,12 @@
 <div class="dashboard">
     <div class="dash-header">
-        <a href="/dashboard/create/"><button id="create-post" class="btn create-btn">Create Post</button></a>
-        <h2 class="title-dashboard">Your Posts</h2>
+        <h2 class="text-center title-dashboard">Your Posts</h2>
     </div>
 
     {{#if posts.length}}
 
     {{#each posts as |post|}}
-        <div class="dash-posts">
+        <div class=" container dash-posts">
             {{> post-info post}}
             <a href="/dashboard/edit/{{post.id}}"><button class="btn edit-btn">Edit Post</button></a>
         </div>
@@ -15,7 +14,7 @@
 
     {{else}}
     <h4>No posts yet!</h4>
-
+    <a href="/dashboard/create/"><button id="create-post" class="btn create-btn">Create Post</button></a>
     {{/if}}
 
 </div>
