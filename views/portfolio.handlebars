@@ -1,103 +1,289 @@
-<section id="profile">
-    <div class="profile-background">
-        <div class="profile-wrapper">
-            <div class="section-title">
-                <h2>
-                    <span>01</span>
-                    About Me
-                </h2>
+<div class="preloader">
+    <span class="loader">
+        <span class="loader-inner"></span>
+    </span>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="sidebar">
+            <div class="sidebarWrapper">
+
+                {{!-- Portfolio profile pic --}}
+                <img class="user-pic" src="https://avatars.githubusercontent.com/{{post.github}}" alt="">
+                <div class="profilename">
+                    {{post.name}}
+                </div>
+
+
+                {{!-- Table of content under profile pic --}}
+                <div class="menu-nav">
+                    <div class="toggle-btn">
+                        <span class="lines"></span>
+                    </div>
+                    <ul>
+                        <li class="active">
+                            <a href="#about">About Me</a>
+                        </li>
+                        <li>
+                            <a href="#projects">Projects</a>
+                        </li>
+                        <li>
+                            <a href="#education">Education</a>
+                        </li>
+                        <li>
+                            <a href="#work">Experience</a>
+                        </li>
+                        <li>
+                            <a href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                {{!-- Social media icons --}}
+                <div class="fixed-right-socials">
+                    <ul class="list-unstiled">
+                        <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa-regular fa-envelope"></i></a></li>
+                    </ul>
+                </div>
             </div>
-            <h1>Hello, my name is {{post.name}}</h1>
-            <h4> I am a {{post.job_title}}</h4>
-            <p>{{post.about}}</p>
+        </div>
+    </div>
+</div>
+
+{{!-- About me section --}}
+<section id="about">
+    <div class="about-background">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-9 col-sm-offset-3 aboutWrapper">
+
+
+                    <div class="section-title">
+                        <h2><span>01</span>About me</h2>
+                    </div>
+                    <h1>Hello, I am <strong> {{post.name}} </strong> <br> <span class="bg-color"> {{post.job_title}} </span>
+                    </h1>
+                    <p> {{post.about}} </p>
+
+                    <div class="skills">
+                        {{!-- Add skill list here --}}
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
-<section id="education">
-    <div class="education-background">
-        <div class="education-wrapper">
-            <div class="section-title">
-                <h2>
-                    <span>02</span>
-                    Education
-                </h2>
-            </div>
-            <!-- Repeat as necessary -->
-            <div class="education-box">
-                <div>
-                    <i></i>
+
+<section id="portfolio">
+    <div class="portfolio-background">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-9 col-sm-offset-3 portfolioWrapper">
+
+                    <div class="section-title">
+                        <h2 class="pull-left"><span>02</span>Portfolio</h2>
+                    </div>
+                    <div class="row">
+                        <div id="mix-container">
+
+                            <div class="col-xs-12 col-sm-4 mix category-1">
+                                <div class="imageWrapper">
+                                    <a class="lightbox" href="#popup-1">
+                                        <img src="images/portfolio-1.jpg" alt="">
+                                        <div class="imageHover">
+                                            <div>
+                                                <h3>Project Title</h3>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                    <div id="popup-1" class="mfp-hide popup-box">
+                                        <img src="images/portfolio-1.jpg" alt="">
+                                        <div>
+                                            <h3>Project Title</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+                                                ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
+                                                dis parturient montes, nascetur ridiculus mus. Nulla consequat massa
+                                                quis enim.</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-4 mix category-2">
+                                <div class="imageWrapper">
+                                    <a class="lightbox" href="#popup-2">
+                                        <img src="images/portfolio-2.jpg" alt="">
+                                        <div class="imageHover">
+                                            <div>
+                                                <h3>Project Title</h3>
+                                                <span>Websites</span>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                    <div id="popup-2" class="mfp-hide popup-box">
+                                        <img src="images/portfolio-2.jpg" alt="">
+                                        <div>
+                                            <h3>Project Title</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+                                                ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
+                                                dis parturient montes, nascetur ridiculus mus. Nulla consequat massa
+                                                quis enim.</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-4 mix category-1">
+                                <div class="imageWrapper">
+                                    <a class="lightbox" href="#popup-3">
+                                        <img src="images/portfolio-3.jpg" alt="">
+                                        <div class="imageHover">
+                                            <div>
+                                                <h3>Project Title</h3>
+                                                <span>Branding</span>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                    <div id="popup-3" class="mfp-hide popup-box">
+                                        <img src="images/portfolio-3.jpg" alt="">
+                                        <div>
+                                            <h3>Project Title</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+                                                ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
+                                                dis parturient montes, nascetur ridiculus mus. Nulla consequat massa
+                                                quis enim.</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
                 </div>
-            <h3>Place</h3>
-            <span>Years</span>
-            <p>What I did</p>
-            </div> 
+            </div>
         </div>
     </div>
 </section>
+
+
+<section id="resume">
+    <div class="resume-background">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-9 col-sm-offset-3 resumeWrapper">
+
+                    <div class="section-title">
+                        <h2><span>04</span>Education</h2>
+                    </div>
+
+                    <div class="resume-box">
+                        <div>
+                            <i class="icon_pencil"></i>
+                        </div>
+                        <div>
+                            <h3>Academy of Art University</h3>
+                            <span>2015 - Present</span>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 
 <section id="work">
     <div class="work-background">
-        <div class="work-wrapper">
-            <div class="section-title">
-                <h2>
-                    <span>03</span>
-                    Work Experience
-                </h2>
-            </div>
-            <!-- Repeat as necessary -->
-            <div class="work-box">
-                <div>
-                    <i></i>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-9 col-sm-offset-3 workWrapper">
+
+                    <div class="section-title">
+                        <h2><span>05</span>Work Experience</h2>
+                    </div>
+                    <div class="work-box">
+                        <div>
+                            <i class="icon_pencil"></i>
+                        </div>
+                        <div>
+                            <h3>Academy of Art University</h3>
+                            <span>2015 - Present</span>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                    </div>
+
                 </div>
-            <h3>Place</h3>
-            <span>Years</span>
-            <p>What I did</p>
-            </div> 
+            </div>
         </div>
     </div>
 </section>
 
-<section id="skills">
-    <div class="skills-background">
-        <div class="skills-wrapper">
-            <div class="section-title">
-                <h2>
-                    <span>04</span>
-                    Skills
-                </h2>
-            </div>
-            <!-- Repeat as necessary -->
-            <div class="skills-box">
-                <div>
-                    <i></i>
+
+<section id="contact">
+    <div class="contact-background">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-9 col-sm-offset-3 contactWrapper">
+
+                    <div class="section-title">
+                        <h2><span>07</span>Get In Touch</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 contact-info">
+                            <div class="widget">
+                                <ul>
+                                    <li>
+                                        <h3><span class="icon_phone" aria-hidden="true"></span> Phone</h3>
+                                        <p>+(987) 654 321 01</p>
+                                    </li>
+                                    <li>
+                                        <h3><span class="icon_mail" aria-hidden="true"></span> Email</h3>
+                                        <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                                                data-cfemail="117b7e797f7f683f627c78657951757e7c70787f3f727e7c">[email&#160;protected]</a>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-            <h3>Place</h3>
-            <span>Years</span>
-            <p>What I did</p>
-            </div> 
+            </div>
         </div>
     </div>
 </section>
 
-<section id="hobbies">
-    <div class="hobbies-background">
-        <div class="hobbies-wrapper">
-            <div class="section-title">
-                <h2>
-                    <span>05</span>
-                    Hobbies
-                </h2>
-            </div>
-            <!-- Repeat as necessary -->
-            <div class="hobbies-box">
-                <div>
-                    <i></i>
+
+<footer class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-9 col-sm-offset-3 footer-background">
+                <div class="row">
+                    <div class="col-sm-6 text-left">
+                        Copyright &copy; 2022 {{user.name}}. All Right Reserved
+                    </div>
+                    <div class="col-sm-6 text-right">
+                        Designed With <i class="fa fa-heart-o red"></i> By <a target="_blank"
+                            href="portfoliolink">Portfolio title</a>
+                    </div>
                 </div>
-            <h3>Place</h3>
-            <span>Years</span>
-            <p>What I did</p>
-            </div> 
+            </div>
         </div>
     </div>
-</section>
+</footer>
+</body>
+
+</html>
