@@ -11,7 +11,7 @@ body {
 }
 
 hero {
-    height: 12rem;
+    height: 7rem;
     background:transparent;
     display: flex;
     justify-content: center;
@@ -56,6 +56,41 @@ button {
     margin-top: 2rem;
 }
 
+#logout{ 
+    font-size: 1.5rem;
+}
+
+#email,
+#password,
+#login-action {
+    margin-left: 30rem;
+}
+
+.title-login{
+    margin-left: 6rem;
+    font-size: 3rem;
+}
+
+#sign-up {
+    font-size: 1rem;
+}
+#login-btn {
+    font-size: 1rem;
+}
+
+.signup-form{
+    margin-left: 50rem;
+}
+
+.title-sign{
+    margin-left: 4rem;
+    font-size: 3rem;
+}
+
+#signup-data{
+    margin-left: 6rem;
+}
 /* .card {
     margin-top: 2rem;
 } */
+

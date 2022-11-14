@@ -6,7 +6,7 @@ const withAuth = require('../../utils/auth');
 router.get('/', async (req, res) => {
     try {
         const postData = await Post.findAll({
-            attributes: ['id', 'name', 'job_title', 'about', 'github'],
+            attributes: ['id', 'name', 'job_title', 'about', 'project_name', 'project_desc', 'school_name', 'graduation', 'degree', 'workExp', 'empDate', 'jobDesc', 'phone', 'email', 'github' ],
             include: [
                 {
                     model: User,
@@ -26,7 +26,7 @@ router.get('/:id', async (req, res) => {
             where: {
                 id: req.params.id
             },
-            attributes: ['id', 'name', 'job_title', 'about', 'github'],
+            attributes: ['id', 'name', 'job_title', 'about', 'project_name', 'project_desc', 'school_name', 'graduation', 'degree', 'workExp', 'empDate', 'jobDesc', 'phone', 'email', 'github'],
             include: [
                 {
                     model: User,
@@ -50,11 +50,23 @@ router.get('/:id', async (req, res) => {
 router.post('/', withAuth, async (req, res) => {
     try {
         const postData = await Post.create({
-            name: req.body.name,
-            job_title: req.body.job_title,
-            about: req.body.about,
-            github: req.body.github,
+            // name: req.body.name,
+            // job_title: req.body.job_title,
+            // about: req.body.about,
+            // project_name: req.body.project_name,
+            // project_desc: req.body.project_desc,
+            // school_name: req.body.school_name,
+            // graduation: req.body.graduation,
+            // degree: req.body.degree,
+            // workExp: req.body.workExp,
+            // empDate: req.body.empDate,
+            // jobDesc: req.body.jobDesc,
+            // phone: req.body.phone,
+            // email: req.body.email,
+            // github: req.body.github,
+            ...req.body,
             user_id: req.session.user_id
+            
         });
         
         res.status(200).json(postData)
@@ -68,10 +80,21 @@ router.put('/:id', withAuth, async (req, res) => {
     try {
         const postData = await Post.update(
             {
-                name: req.body.name,
-                job_title: req.body.job_title,
-                about: req.body.about,
-                github: req.body.github,
+            name: req.body.name,
+            job_title: req.body.job_title,
+            about: req.body.about,
+            project_name: req.body.project_name,
+            project_desc: req.body.project_desc,
+            school_name: req.body.school_name,
+            graduation: req.body.graduation,
+            degree: req.body.degree,
+            workExp: req.body.workExp,
+            emoDate: req.body.empDate,
+            jobDesc: req.body.jobDesc,
+            phone: req.body.phone,
+            email: req.body.email,
+            github: req.body.github,
+            // ...req.body
             },
             {
                 where: {
