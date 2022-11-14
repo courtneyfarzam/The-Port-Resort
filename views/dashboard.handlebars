@@ -9,7 +9,7 @@
         <div class=" container dash-posts">
             {{> post-info post}}
             <a href="/dashboard/edit/{{post.id}}"><button class="btn edit-btn">Edit Post</button></a>
-            <a href="/post/{{post.github}}"><button class="btn edit-btn">View Portfolio</button></a>
+            <a href="/post/{{post.github}}" target="blank"><button class="btn edit-btn">View Portfolio</button></a>
         </div>
     {{/each}}
 
