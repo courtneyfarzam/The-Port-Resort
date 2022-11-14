@@ -23,6 +23,42 @@ Post.init(
             type: DataTypes.TEXT,
             allowNull: false,
         },
+        project_name: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        project_desc: {
+            type: DataTypes.STRING
+        },
+        school_name: {
+            type: DataTypes.STRING
+        },
+        graduation: {
+            type: DataTypes.STRING
+        },
+        degree: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        workExp: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        empDate: {
+            type: DataTypes.STRING,
+        },
+        jobDesc: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        phone: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        email: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
         github: {
             type: DataTypes.STRING,
             allowNull: false,

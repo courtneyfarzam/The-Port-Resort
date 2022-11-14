@@ -1,32 +1,79 @@
 <div class="post-input">
-    <a href="/dashboard" class="dashboard-back">&larr; Back to Dashboard</a>
-    <h2 class="title-edit">Edit Blog Post</h2>
-
-    <form class="container m-0 edit-post">
-        <div class=" row port-name">
-            <label for="name">Name:</label>
-            <input type="text" name="name" class="name" value="{{post.name}}">
+    <form class="container edit-post">
+        <h2 class="title-edit text-center">Edit Portfolio Post</h2>
+        <div class="row port-name">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" class="name" name="name" value={{post.name}}>
         </div>
 
-        <div class="row port-job">
-            <label for="job_title">Job Title:</label>
-            <input type="text" name="job_title" class="job-title" value="{{post.job_title}}">
+        <div class="row port-job_title">
+            <label for="job_title">Job title:</label>
+            <input type="text" id="job_title" class="job_title" name="job_title" value={{post.job_title}}>
         </div>
 
         <div class="row port-about">
             <label for="about">About:</label>
-            <input type="text" name="about" class="about" value="{{post.about}}">
+            <input type="text" id="about" class="about" name="about" value={{post.about}}>
         </div>
 
-        
-        <div class="port-github">
+        <div class="row port-project_name">
+            <label for="project_name">Project Name:</label>
+            <input type="text" id="project_name" class="project_name" name="project_name" placeholder="Project Name" value={{post.project_name}}>
+        </div>
+
+        <div class="row port-project_desc">
+            <label for="project_desc">Project description:</label>
+            <input type="text" id="project_desc" class="project_desc" name="project_desc" placeholder="Project description" value={{post.project_desc}}>
+        </div>
+
+        <div class="row port-school_name">
+            <label for="school_name">School Name:</label>
+            <input type="text" id="school_name" class="school_name" name="school_name" value={{post.school_name}}>
+        </div>
+
+        <div class="row port-graduation">
+            <label for="graduation">Graduation date:</label>
+            <input type="text" id="graduation" class="graduation" name="graduation" value={{post.graduation}}>
+        </div>
+
+        <div class="row port-degree">
+            <label for="degree">Degree:</label>
+            <input type="text" id="degree" class="degree" name="degree" value={{post.degree}}>
+        </div>
+
+        <div class="row port-workExp">
+            <label for="workExp">Job Title:</label>
+            <input type="text" id="workExp" class="workExp" name="workExp" value={{post.workExp}}>
+        </div>
+
+        <div class="row port-empDate">
+            <label for="empDate">Work Experience:</label>
+            <input type="text" id="empDate" class="empDate" name="empDate" value={{post.empDate}}>
+        </div>
+
+        <div class="row port-jobDesc">
+            <label for="jobDesc">Job description:</label>
+            <input type="text" id="jobDesc" class="jobDesc" name="jobDesc" value={{post.jobDesc}}>
+        </div>
+
+        <div class="row port-phone">
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" class="phone" name="phone" value={{post.phone}}>
+        </div>
+
+        <div class="row port-email">
+            <label for="email">Email:</label>
+            <input type="text" id="email_edit" class="email" name="email" value={{post.email}}>
+        </div>
+
+
+        <div class="row port-github">
             <label for="github">Github:</label>
-            <input type="text" name="github" class="github" value="{{post.github}}">
+            <input type="text" id="github" class="github" name="github" value={{post.github}}>
         </div>
 
 
-
-        <button type="submit" class="btn publish-btn">Save Changes</button>
+        <button type="submit" class="btn publish-btn">Savge Changes</button>
     </form>
 </div>
 

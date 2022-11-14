@@ -7,9 +7,9 @@ router.get('/', withAuth, async (req, res) => {
     try {
         const postData = await Post.findAll({
             where: {
-                user_id: req.session.user_id
+                user_id: req.session.user_id 
             },
-            attributes: ['id', 'name', 'job_title', 'about', 'github'],
+            attributes: ['id', 'name', 'job_title', 'about', 'project_name', 'project_desc', 'school_name', 'graduation', 'degree', 'workExp', 'empDate', 'jobDesc', 'phone', 'email', 'github'],
             include: [
                 {
                     model: User,
@@ -36,7 +36,7 @@ router.get('/edit/:id', withAuth, async (req, res) => {
             where: {
                 id: req.params.id
             },
-            attributes: ['id', 'name', 'job_title', 'about', 'github'],
+            attributes: ['id', 'name', 'job_title', 'about', 'project_name', 'project_desc', 'school_name', 'graduation', 'degree', 'workExp', 'empDate', 'jobDesc', 'phone', 'email', 'github'],
             include: [
                 {
                     model: User,
@@ -68,7 +68,7 @@ router.get('/create', withAuth, async (req, res) => {
             where: {
                 user_id: req.session.user_id
             },
-            attributes: ['name', 'job_title', 'about', 'github'],
+            attributes: ['id', 'name', 'job_title', 'about', 'project_name', 'project_desc', 'school_name', 'graduation', 'degree', 'workExp', 'empDate', 'jobDesc', 'phone', 'email', 'github'],
             include: [
                 {
                     model: User,

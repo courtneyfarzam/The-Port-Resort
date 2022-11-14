@@ -6,7 +6,7 @@ const { User, Post } = require('../models');
 router.get('/', async (req, res) => {
     try {
         const postData = await Post.findAll({
-            attributes: ['id', 'name', 'job_title', 'about', 'github'],
+            attributes: ['id', 'name', 'job_title', 'about', 'project_name', 'project_desc', 'school_name', 'graduation', 'degree', 'workExp', 'empDate', 'jobDesc', 'phone', 'email', 'github'],
             include: [
                 {
                     model: User,
@@ -56,7 +56,7 @@ router.get('/post/:github', async (req, res) => {
             where: {
                 github: req.params.github
             },
-            attributes: ['id', 'name', 'job_title', 'about', 'github'],
+            attributes: ['id', 'name', 'job_title', 'about', 'project_name', 'project_desc', 'school_name', 'graduation', 'degree', 'workExp', 'empDate', 'jobDesc', 'phone', 'email', 'github'],
             include: [
                 {
                     model: User,
