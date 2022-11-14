@@ -1,21 +1,21 @@
-/* * {
-    background-color: #ffffff;
-} */
-
 body {
     color: #3c3c3c;
     font: 300 14px open sans, sans-serif;
     letter-spacing: 0.5px;
 }
 h1 {
- font: 900 24px/36px "Titillium Web", serif;
- margin: 0 0 15px;
- letter-spacing: 1px;
- line-height: 2;
+    font: 900 24px/36px "Titillium Web", serif;
+    margin: 0 0 15px;
+    letter-spacing: 1px;
+    line-height: 2;
 }
 
 h2 {
-    font: 200 38px "Titillium Web", serif;
+    font: 200 48px "Titillium Web", serif;
+}
+
+.numbers {
+    margin-right: 1rem;
 }
 
 .section-title h2::after {
@@ -27,6 +27,9 @@ h2 {
     margin-left: 30px;
 }
 
+.projects {
+    margin-left: .3rem;
+}
 
 .sidebar,
 .sidebarWrapper,
@@ -62,17 +65,31 @@ h2 {
     color: whitesmoke;
     text-align: center;
     font-family: 'Meddon', cursive;
-    font-size: 1.8rem;
+    font-size: 1.2rem;
 }
 .menu-nav {
     margin-top: 1rem;
 }
 
+.contact {
+    list-style-type: none;
+    margin-left: -1.3rem;
+}
+
 .menu-nav ul {
-    display: block;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     padding: 20px 30px;
     background: #fff none repeat scroll 0 0;
     list-style-type: none;
+    
+}
+
+.menu-nav ul li {
+    text-align: center;
+    text-transform: uppercase;
+    font: 900 13px "Titillium Web",serif;
 }
 
 .row>* {
@@ -88,6 +105,17 @@ h2 {
     font-size: 25px;
     color: black;
     display: block;
+    font: 900 .9rem "Titillium Web",serif;
+    line-height: 2;
+}
+
+.btn {
+    background-color: #9c27b0;
+    color:#fff;
+}
+
+.btn:hover {
+    color:#9c27b0;
 }
 
 .sidebar a:hover {
@@ -107,11 +135,20 @@ main {
     width: 90%;
 }
 
+section {
+    padding: 1.5rem;
+}
+
+.body-margin {
+    margin-top: 3rem;
+}
+
 .user-pic {
     width: 200px;
     height: auto;
     border-radius: 50%;
     margin:0 auto;
+    margin-top: 3rem;
 }
 .section-title span {
     color: #969696;
