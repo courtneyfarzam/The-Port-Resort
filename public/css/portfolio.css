@@ -1,0 +1,128 @@
+/* * {
+    background-color: #ffffff;
+} */
+
+body {
+    color: #3c3c3c;
+    font: 300 14px open sans, sans-serif;
+    letter-spacing: 0.5px;
+}
+h1 {
+ font: 900 24px/36px "Titillium Web", serif;
+ margin: 0 0 15px;
+ letter-spacing: 1px;
+ line-height: 2;
+}
+
+h2 {
+    font: 200 38px "Titillium Web", serif;
+}
+
+.section-title h2::after {
+    background: #9c27b0 none repeat scroll 0 0;
+    content: "";
+    display: table;
+    height: 2px;
+    width: 40px;
+    margin-left: 30px;
+}
+
+
+.sidebar,
+.sidebarWrapper,
+.sig-pic {
+    background-color: purple;
+}
+
+.bg-color {
+    background-color: black;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 70px;
+    background-color: purple;
+    overflow-x: hidden;
+    box-shadow: 0px 5px 20px 10px #aaaaaa;
+}
+
+.sidebarWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.profilename {
+    background-color: purple;
+    color: whitesmoke;
+    text-align: center;
+    font-family: 'Meddon', cursive;
+    font-size: 1.8rem;
+}
+.menu-nav {
+    margin-top: 1rem;
+}
+
+.menu-nav ul {
+    display: block;
+    padding: 20px 30px;
+    background: #fff none repeat scroll 0 0;
+    list-style-type: none;
+}
+
+.row>* {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+
+
+.sidebar a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+}
+
+.sidebar a:hover {
+    color: plum;
+}
+
+.list-unstiled {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+}
+
+main {
+    margin-left: 400px;
+    padding: 0px 10px;
+    width: 90%;
+}
+
+.user-pic {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    margin:0 auto;
+}
+.section-title span {
+    color: #969696;
+    font: 500 1.4rem open sans, sans-serif;
+}
+
+@media screen and (max-height: 450px) {
+    .sidebar {
+        padding-top: 15px;
+    }
+    .sidebar a {
+        font-size: 18px;
+    }
+}
