@@ -5,29 +5,28 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/cmash93/caffeine-and-coding">
+  <a href="https://github.com/cmash93/The-Port-Resort">
     <img src="public/images/logo.png" alt="Logo" width="180" height="180">
   </a>
 
-<h1 style="font-size:35px;" align="center">(caffeine &amp;&amp; coding)</h1>
+<h1 style="font-size:35px;" align="center">The Port Resort</h1>
 
   <p align="center" style="font-size:18px;">
-    Caffeine &amp;&amp; Coding is a CMS style blog that gears towards conversations about coding, tech, and the like. Whether you would like to share your most recent coding epiphany or just a game review, Caffeine &amp;&amp; Coding can serve as an open and inviting space to just talk tech!
+    At The Port Resort, users can seamlessly create their very own portfolio website for future employers and personal use for FREE. Simply log in, create your profile, and your portfolio will be ready to view! No need to watch countless youtube videos on how to create your own. Just use The Port Resort!
     <br />
-    <a href="https://github.com/cmash93/caffeine-and-coding"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/cmash93/The-Port-Resort"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://desolate-dusk-37866.herokuapp.com/" target="_blank" >Live Website</a>
+    <a href="https://mighty-plateau-36759.herokuapp.com/" target="_blank" >Live Website</a>
         ·
-    <a href="https://github.com/cmash93/caffeine-and-coding/issues">Report Bug</a>
+    <a href="https://github.com/cmash93/The-Port-Resort/issues">Report Bug</a>
     ·
-    <a href="https://github.com/cmash93/caffeine-and-coding/issues">Request Feature</a>
+    <a href="https://github.com/cmash93/The-Port-Resort/issues">Request Feature</a>
   </p>
 </div>
 
@@ -55,7 +54,7 @@
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/cmash93/caffeine-and-coding.git
+   git clone https://github.com/cmash93/The-Port-Resort.git
    ```
 2. Install NPM packages
    ```sh
@@ -68,15 +67,19 @@
    ```sh
    SOURCE db/schema.sql
    ```
-4. Access prepopulate data from seeds.<br>
+<!-- 4. Access prepopulate data from seeds.<br>
  <i><b>Note:</b> the seed data is for visual reference only. You will not be able to sign in with this data due to the use of bcrypt.</i>
    ```sh
    npm run seed
-   ```
-5. Start the server
+   ``` -->
+4. Start the server manually or use Nodemon for instant server reload
    ```sh
    npm start
-   ```
+   ```    
+   <b>OR</b>    
+   ```sh
+   nodemon the-port-resort
+   ``` 
 
 
 <!-- CONTRIBUTING -->
@@ -102,27 +105,30 @@ Distributed under the MIT License.
 
 <!-- CONTACT -->
 
-## Contact
+## Creators
 
-Courtney Ashley Farzam - cmash93@outlook.com
+Courtney Ashley Farzam - cmash93@outlook.com    
+Elham Hamzapour - ehamzapour@gmail.com    
+Bryce Bann - punkrice@gmail.com    
+Jose Blay - joseblay10@gmail.com    
 
-Project Link: [https://github.com/cmash93/caffeine-and-coding](https://github.com/cmash93/caffeine-and-coding)
+The Port Resort: [https://github.com/cmash93/The-Port-Resort](https://github.com/cmash93/The-Port-Resort)
 
 <!-- ACKNOWLEDGMENTS -->
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/cmash93/E-Commerce-Back-End.svg?style=for-the-badge
-[contributors-url]: https://github.com/cmash93/E-Commerce-Back-End/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/cmash93/E-Commerce-Back-End.svg?style=for-the-badge
-[forks-url]: https://github.com/cmash93/E-Commerce-Back-End/network/members
-[stars-shield]: https://img.shields.io/github/stars/cmash93/E-Commerce-Back-End.svg?style=for-the-badge
-[stars-url]: https://github.com/cmash93/E-Commerce-Back-End/stargazers
-[issues-shield]: https://img.shields.io/github/issues/cmash93/E-Commerce-Back-End.svg?style=for-the-badge
-[issues-url]: https://github.com/cmash93/E-Commerce-Back-End/issues
-[license-shield]: https://img.shields.io/github/license/cmash93/E-Commerce-Back-End.svg?style=for-the-badge
-[license-url]: https://github.com/cmash93/E-Commerce-Back-End/blob/main/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/cmash93/The-Port-Resort.svg?style=for-the-badge
+[contributors-url]: https://github.com/cmash93/The-Port-Resort/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/cmash93/The-Port-Resort.svg?style=for-the-badge
+[forks-url]: https://github.com/cmash93/The-Port-Resort/network/members
+[stars-shield]: https://img.shields.io/github/stars/cmash93/The-Port-Resort.svg?style=for-the-badge
+[stars-url]: https://github.com/cmash93/The-Port-Resort/stargazers
+[issues-shield]: https://img.shields.io/github/issues/cmash93/The-Port-Resort.svg?style=for-the-badge
+[issues-url]: https://github.com/cmash93/The-Port-Resort/issues
+[license-shield]: https://img.shields.io/github/license/cmash93/The-Port-Resort.svg?style=for-the-badge
+[license-url]: https://github.com/cmash93/The-Port-Resort/blob/main/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/courtneyashleyfarzam
 [product-screenshot]: images/screenshot.png
