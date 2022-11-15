@@ -1,6 +1,6 @@
 <div id="viewport">
     <!-- Sidebar -->
-    <div id="sidebar">
+    <div class="sidebarWrapper sidebar nav-menu" id="sidebar">
         <header>
             <img class="user-pic" src="https://avatars.githubusercontent.com/{{post.github}}" alt="">
             <p class="profile-name">{{post.name}}</p>
@@ -24,6 +24,15 @@
                 <a href="#contact">Contact</a>
             </li>
         </ul>
+
+        {{!-- Social media icons --}}
+        <div class="socials">
+            <ul class="list-unstyled">
+                <li><a href="https://github.com/{{post.github}}" target="_blank"><i class="fa-brands fa-github github-icon"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/{{post.linkedin}}/" target="_blank"><i class="fa-brands fa-linkedin linkedin-icon"></i></a></li>
+                <li><a href="mailto:{{post.email}}"><i class="fa-regular fa-envelope email-icon" target="_blank"></i></a></li>
+            </ul>
+        </div>
     </div>
     <!-- Content -->
     <div id="content">
@@ -73,7 +82,8 @@
                                         <div>
                                             <h3>{{post.project1_name}}</h3>
                                             <p>{{post.project1_desc}}</p>
-                                            <a href="{{post.repository1}}" target="blank"><button class="btn">Visit Repo</button></a>
+                                            <a href="{{post.repository1}}" target="blank"><button class="btn">Visit
+                                                    Repo</button></a>
                                         </div>
                                     </div>
 
@@ -82,7 +92,8 @@
                                         <div>
                                             <h3>{{post.project2_name}}</h3>
                                             <p>{{post.project2_desc}}</p>
-                                            <a href="{{post.repository2}}" target="blank"><button class="btn">Visit Repo</button></a>
+                                            <a href="{{post.repository2}}" target="blank"><button class="btn">Visit
+                                                    Repo</button></a>
                                         </div>
                                     </div>
 
@@ -91,7 +102,8 @@
                                         <div>
                                             <h3>{{post.project3_name}}</h3>
                                             <p>{{post.project3_desc}}</p>
-                                            <a href="{{post.repository3}}" target="blank"><button class="btn">Visit Repo</button></a>
+                                            <a href="{{post.repository3}}" target="blank"><button class="btn">Visit
+                                                    Repo</button></a>
                                         </div>
                                     </div>
                                 </div>
@@ -206,7 +218,8 @@
                                 Copyright &copy; 2022 {{user.name}}. All Right Reserved
                             </div>
                             <div class="col-sm-6 text-right">
-                                Designed With <i class="fa fa-heart-o red"></i> By <a target="_blank" href="/">The Port Resort</a>
+                                Designed With <i class="fa fa-heart-o red"></i> By <a target="_blank" href="/">The Port
+                                    Resort</a>
                             </div>
                         </div>
                     </div>

@@ -1,21 +1,30 @@
 <div class="dashboard">
-    <div class="dash-header">
-        <h2 class="text-center title-dashboard">Your Posts</h2>
+    <div class="dash-header text-white d-flex flex-column align-items-center">
+        {{#each posts as |post|}}
+        <h1 class="text-center title-dashboard">Hello, {{user.name}}</h1><br>
+        <div>
+            <a href="/dashboard/edit/{{id}}"><button class="btn signup-btn btn-outline-light btn-lg">Edit
+                    Profile</button></a>
+            <a href="/post/{{github}}" target="_blank"><button class="btn signup-btn btn-outline-light btn-lg">View
+                    Portfolio</button></a>
+            {{/each}}
+        </div>
     </div>
 
     {{#if posts.length}}
 
     {{#each posts as |post|}}
-        <div class=" container dash-posts">
-            {{> post-info post}}
-            <a href="/dashboard/edit/{{post.id}}"><button class="btn edit-btn">Edit Post</button></a>
-            <a href="/post/{{post.github}}" target="blank"><button class="btn edit-btn">View Portfolio</button></a>
-        </div>
+    <div class="container dash-posts">
+        {{> post-info post}}
+
+    </div>
     {{/each}}
 
     {{else}}
-    <h4>No posts yet!</h4>
-    <a href="/dashboard/create/"><button id="create-post" class="btn create-btn">Create Post</button></a>
+    <div class="dash-header text-white d-flex flex-column align-items-center">
+    <h4 class="text-white">No info about you yet! 😔</h4>
+    <a href="/dashboard/create/"><button id="create-post" class="btn signup-btn btn-outline-light btn-lg">Create Profile</button></a>
+    </div>
     {{/if}}
 
 </div>
