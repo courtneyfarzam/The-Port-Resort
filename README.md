@@ -107,10 +107,10 @@ Distributed under the MIT License.
 
 ## Creators
 
-Courtney Ashley Farzam - cmash93@outlook.com
-Elham Hamzapour - ehamzapour@gmail.com
-Bryce Bann - punkrice@gmail.com
-Jose Blay - joseblay10@gmail.com
+Courtney Ashley Farzam - cmash93@outlook.com    
+Elham Hamzapour - ehamzapour@gmail.com    
+Bryce Bann - punkrice@gmail.com    
+Jose Blay - joseblay10@gmail.com    
 
 The Port Resort: [https://github.com/cmash93/The-Port-Resort](https://github.com/cmash93/The-Port-Resort)
 
