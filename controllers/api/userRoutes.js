@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { User, Post, Comment } = require('../../models');
+const nodemailer = require("nodemailer");
 
 router.get('/', async (req, res) => {
     try {
@@ -73,13 +74,39 @@ router.post('/', async (req, res) => {
             github: req.body.github,
             email: req.body.email,
             password: req.body.password
-        });
+        })
+        
         
         req.session.save(() => {
             req.session.user_id = userData.id;
             req.session.name = userData.name;
             req.session.github = userData.github;
             req.session.logged_in = true;
+
+            const transporter = nodemailer.createTransport({
+                host: "smtp.ethereal.email",
+                port: 587,
+                auth: {
+                  user: process.env.EMAIL,
+                  pass: process.env.PASSWORD,
+                },
+              });
+      
+              let mailOptions = {
+                from: process.env.EMAIL,
+                to: userData.email,
+                subject: "Welcome to The Port Resort",
+                text: "Welcome to port resort your one stop portfolio creator",
+              };
+      
+              transporter.sendMail(mailOptions, function (err, data) {
+                if (err) {
+                  console.log("Error occured", err);
+                } else {
+                  console.log("Email Sent", data);
+                }
+              });
+      
 
             res.status(200).json(userData)
         })
