@@ -11,7 +11,7 @@ const editPost = async (event) => {
     const role = document.querySelector('input[name="role"]').value;
     const company = document.querySelector('input[name="company"]').value;
     const job_starting = document.querySelector('input[name="job_starting"]').value;
-    const job_ending = document.querySelector('input[name="company"]').value;
+    const job_ending = document.querySelector('input[name="job_ending"]').value;
     const job_desc = document.querySelector('input[name="job_desc"]').value;
     const school_name = document.querySelector('input[name="school_name"]').value;
     const graduation_date = document.querySelector('input[name="graduation_date"]').value;
