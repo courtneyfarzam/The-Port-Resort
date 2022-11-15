@@ -82,29 +82,28 @@ router.post('/', async (req, res) => {
             req.session.github = userData.github;
             req.session.logged_in = true;
 
-            // const transporter = nodemailer.createTransport({
-            //     host: "smtp.ethereal.email",
-            //     port: 587,
-            //     auth: {
-            //       user: process.env.EMAIL,
-            //       pass: process.env.PASSWORD,
-            //     },
-            //   });
+            const transporter = nodemailer.createTransport({
+                service: "Gmail",
+                auth: {
+                  user: process.env.EMAIL,
+                  pass: process.env.PASSWORD,
+                },
+              });
 
-            //   let mailOptions = {
-            //     from: process.env.EMAIL,
-            //     to: userData.email,
-            //     subject: "Welcome to The Port Resort",
-            //     text: "Welcome to port resort your one stop portfolio creator",
-            //   };
+              let mailOptions = {
+                from: process.env.EMAIL,
+                to: userData.email,
+                subject: "Welcome to The Port Resort",
+                text: "Welcome to port resort your one stop portfolio creator",
+              };
 
-            //   transporter.sendMail(mailOptions, function (err, data) {
-            //     if (err) {
-            //       console.log("Error occured", err);
-            //     } else {
-            //       console.log("Email Sent", data);
-            //     }
-            //   });
+              transporter.sendMail(mailOptions, function (err, data) {
+                if (err) {
+                  console.log("Error occured", err);
+                } else {
+                  console.log("Email Sent", data);
+                }
+              });
 
 
 
