@@ -6,47 +6,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PROJECT BETTA WORK</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/style.css">
-    <script src="https://kit.fontawesome.com/0aa93583c3.js"></script> 
+    <script src="https://kit.fontawesome.com/0aa93583c3.js"></script>
 </head>
 
 <body>
     <header>
-        <hero>
-            <div class="img">
-                <h1 class="title">PORTFOLIO GENERATOR</h1>
-            </div>
-        </hero>
-
-        <nav class="navbar navbar-expand-lg">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
             <div class="container-fluid">
-                
-                <div class="collapse navbar-collapse" id="navbarSupportedContent"></div>
-                    <ul class="navbar-nav ml-auto mb-2 mb-lg-0 d-flex">
+                <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+                    data-mdb-target="#navbarExample01" aria-controls="navbarExample01" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarExample01">
+                    <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
                         {{#if logged_in}}
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/">HOME</a> 
+                            <a class="nav-link active" aria-current="page" href="/">HOME</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/dashboard">DASHBOARD</a> 
+                            <a class="nav-link active" aria-current="page" href="/dashboard">DASHBOARD</a>
                         </li>
                         <li class="nav-item">
-                            <button type="button" id="logout" class="btn btn-tertiary" data-mdb-ripple-color="light">LOGOUT</button>
+                            <button type="button" id="logout" class="btn btn-tertiary"
+                                data-mdb-ripple-color="light">LOGOUT</button>
                         </li>
 
                         {{else}}
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="/">HOME</a> 
+                            <a class="nav-link" aria-current="page" href="/">HOME</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="/login">LOGIN</a>
                         </li>
                         {{/if}}
                     </ul>
+
                 </div>
             </div>
         </nav>
+        <!-- Navbar -->
     </header>
 
     <main>
@@ -55,9 +58,10 @@
 
     {{!-- <footer> --}}
         {{!-- create later --}}
-    {{!-- </footer> --}}
+        {{!-- </footer> --}}
 </body>
 {{#if logged_in}}
 <script src="/javascript/logout.js"></script>
 {{/if}}
+
 </html>

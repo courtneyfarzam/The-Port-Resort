@@ -1,4 +1,3 @@
-
 body {
     background-color: rgb(215, 215, 215);
     background-size: 44.5rem;
@@ -12,11 +11,28 @@ body {
 
 hero {
     height: 7rem;
-    background:transparent;
+    background: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+}
+
+.hero-image {
+    background-image: url('/images/background.webp');
+    height: 100vh;
+    margin-top: 58px;
+}
+
+.mask {
+    background-color: rgba(0, 0, 0, 0.6);  
+    height: 90vh; 
+    margin-top: -1rem;
+}
+
+form {
+    border: solid #fff .3rem;
+    border-radius: 1rem;
 }
 
 .navbar {
@@ -56,7 +72,7 @@ button {
     margin-top: 2rem;
 }
 
-#logout{ 
+#logout {
     font-size: 1.5rem;
 }
 
@@ -79,16 +95,21 @@ button {
     font-size: 1rem;
 }
 
+.signup-btn {
+    color: white;
+    border: solid white .1rem;
+    margin-bottom: 1rem;
+}
+
 /* .signup-form {
     margin-left: 50rem;
 } */
 
 .title-sign {
-    margin-left: 4rem;
     font-size: 3rem;
+    margin-bottom: 1rem;
 }
 
-#signup-data {
+/* #signup-data {
     margin-left: 6rem;
-}
-
+} */
