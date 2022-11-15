@@ -85,25 +85,25 @@ router.post('/', async (req, res) => {
             const transporter = nodemailer.createTransport({
                 service: "Gmail",
                 auth: {
-                  user: process.env.EMAIL,
-                  pass: process.env.PASSWORD,
+                    user: process.env.EMAIL,
+                    pass: process.env.PASSWORD,
                 },
-              });
+                });
 
-              let mailOptions = {
+                let mailOptions = {
                 from: process.env.EMAIL,
                 to: userData.email,
                 subject: "Welcome to The Port Resort",
                 text: "Welcome to port resort your one stop portfolio creator",
-              };
+                };
 
-              transporter.sendMail(mailOptions, function (err, data) {
+                transporter.sendMail(mailOptions, function (err, data) {
                 if (err) {
-                  console.log("Error occured", err);
+                    console.log("Error occured", err);
                 } else {
-                  console.log("Email Sent", data);
+                    console.log("Email Sent", data);
                 }
-              });
+                });
 
 
 
