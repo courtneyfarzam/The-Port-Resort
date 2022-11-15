@@ -24,9 +24,33 @@ router.get('/:id', async (req, res) => {
             include: [
                 {
                     model: Post,
-                    attributes: [
-                        'id', 'name', 'job_title', 'about', 'github'
-                    ]
+                    attributes: [                
+                        'id', 
+                        'name', 
+                        'job_title', 
+                        'about',
+                        'phone', 
+                        'email',
+                        'github', 
+                        'linkedin',
+                        'role', 
+                        'company',
+                        'job_starting',
+                        'job_ending',
+                        'job_desc',  
+                        'school_name', 
+                        'graduation_date', 
+                        'degree', 
+                        'project1_name', 
+                        'project1_desc', 
+                        'repository1',
+                        'project2_name', 
+                        'project2_desc', 
+                        'repository2',
+                        'project3_name', 
+                        'project3_desc', 
+                        'repository3',
+                    ],
                 },
             ]
         })

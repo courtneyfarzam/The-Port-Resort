@@ -22,35 +22,7 @@ Post.init(
         about: {
             type: DataTypes.TEXT,
             allowNull: false,
-        },
-        project_name: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        project_desc: {
-            type: DataTypes.STRING
-        },
-        school_name: {
-            type: DataTypes.STRING
-        },
-        graduation: {
-            type: DataTypes.STRING
-        },
-        degree: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        workExp: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        empDate: {
-            type: DataTypes.STRING,
-        },
-        jobDesc: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
+        }, 
         phone: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -60,6 +32,78 @@ Post.init(
             allowNull: false,
         },
         github: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        linkedin: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        role: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        company: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        job_starting: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        job_ending: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        job_desc: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        school_name: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        graduation_date: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        degree: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        project1_name: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        project1_desc: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        repository1: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        project2_name: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        project2_desc: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        repository2: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        project3_name: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        project3_desc: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        repository3: {
             type: DataTypes.STRING,
             allowNull: false,
         },
