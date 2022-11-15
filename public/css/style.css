@@ -60,13 +60,13 @@ button {
     font-size: 1.5rem;
 }
 
-#email,
+/* #email,
 #password,
 #login-action {
     margin-left: 30rem;
-}
+} */
 
-.title-login{
+.title-login {
     margin-left: 6rem;
     font-size: 3rem;
 }
@@ -74,23 +74,21 @@ button {
 #sign-up {
     font-size: 1rem;
 }
+
 #login-btn {
     font-size: 1rem;
 }
 
-.signup-form{
+/* .signup-form {
     margin-left: 50rem;
-}
+} */
 
-.title-sign{
+.title-sign {
     margin-left: 4rem;
     font-size: 3rem;
 }
 
-#signup-data{
+#signup-data {
     margin-left: 6rem;
 }
-/* .card {
-    margin-top: 2rem;
-} */
 

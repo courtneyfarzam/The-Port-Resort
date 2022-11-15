@@ -9,11 +9,37 @@ router.get('/', withAuth, async (req, res) => {
             where: {
                 user_id: req.session.user_id 
             },
-            attributes: ['id', 'name', 'job_title', 'about', 'project_name', 'project_desc', 'school_name', 'graduation', 'degree', 'workExp', 'empDate', 'jobDesc', 'phone', 'email', 'github'],
+            attributes: [                
+                'id', 
+                'name', 
+                'job_title', 
+                'about',
+                'phone', 
+                'email',
+                'github', 
+                'linkedin',
+                'role', 
+                'company',
+                'job_starting',
+                'job_ending',
+                'job_desc',  
+                'school_name', 
+                'graduation_date', 
+                'degree', 
+                'project1_name', 
+                'project1_desc', 
+                'repository1',
+                'project2_name', 
+                'project2_desc', 
+                'repository2',
+                'project3_name', 
+                'project3_desc', 
+                'repository3',
+            ],
             include: [
                 {
                     model: User,
-                    attributes: ['name', 'github']
+                    attributes: ['name', 'github', 'email']
                 }
             ]
         });
@@ -36,11 +62,37 @@ router.get('/edit/:id', withAuth, async (req, res) => {
             where: {
                 id: req.params.id
             },
-            attributes: ['id', 'name', 'job_title', 'about', 'project_name', 'project_desc', 'school_name', 'graduation', 'degree', 'workExp', 'empDate', 'jobDesc', 'phone', 'email', 'github'],
+            attributes: [                
+                'id', 
+                'name', 
+                'job_title', 
+                'about',
+                'phone', 
+                'email',
+                'github', 
+                'linkedin',
+                'role', 
+                'company',
+                'job_starting',
+                'job_ending',
+                'job_desc',  
+                'school_name', 
+                'graduation_date', 
+                'degree', 
+                'project1_name', 
+                'project1_desc', 
+                'repository1',
+                'project2_name', 
+                'project2_desc', 
+                'repository2',
+                'project3_name', 
+                'project3_desc', 
+                'repository3',
+            ],
             include: [
                 {
                     model: User,
-                    attributes: ['name', 'github']
+                    attributes: ['name', 'github', 'email']
                 }
             ]
         });
@@ -68,11 +120,37 @@ router.get('/create', withAuth, async (req, res) => {
             where: {
                 user_id: req.session.user_id
             },
-            attributes: ['id', 'name', 'job_title', 'about', 'project_name', 'project_desc', 'school_name', 'graduation', 'degree', 'workExp', 'empDate', 'jobDesc', 'phone', 'email', 'github'],
+            attributes: [                
+                'id', 
+                'name', 
+                'job_title', 
+                'about',
+                'phone', 
+                'email',
+                'github', 
+                'linkedin',
+                'role', 
+                'company',
+                'job_starting',
+                'job_ending',
+                'job_desc',  
+                'school_name', 
+                'graduation_date', 
+                'degree', 
+                'project1_name', 
+                'project1_desc', 
+                'repository1',
+                'project2_name', 
+                'project2_desc', 
+                'repository2',
+                'project3_name', 
+                'project3_desc', 
+                'repository3',
+            ],
             include: [
                 {
                     model: User,
-                    attributes: ['name', 'github']
+                    attributes: ['name', 'github', 'email']
                 }
             ]
         })

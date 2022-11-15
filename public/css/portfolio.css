@@ -1,17 +1,35 @@
+html {
+    font-size: 62.8%;
+}
+
+main {
+    padding: 0rem 1rem;
+    width: 100%;
+}
+
 body {
     color: #3c3c3c;
-    font: 300 14px open sans, sans-serif;
+    font: 300 1.4rem open sans, sans-serif;
     letter-spacing: 0.5px;
 }
+
+section {
+    padding: 1.5rem;
+}
+
+.body-wrapper {
+    width: 70%;
+}
+
 h1 {
-    font: 900 24px/36px "Titillium Web", serif;
-    margin: 0 0 15px;
-    letter-spacing: 1px;
+    font: 900 2.4rem/3.6rem "Titillium Web", serif;
+    margin: 0 0 1.5rem;
+    letter-spacing: 1rem;
     line-height: 2;
 }
 
 h2 {
-    font: 200 48px "Titillium Web", serif;
+    font: 200 4.8rem "Titillium Web", serif;
 }
 
 .numbers {
@@ -22,9 +40,9 @@ h2 {
     background: #9c27b0 none repeat scroll 0 0;
     content: "";
     display: table;
-    height: 2px;
-    width: 40px;
-    margin-left: 30px;
+    height: .2rem;
+    width: 4rem;
+    margin-left: 3rem;
 }
 
 .projects {
@@ -43,31 +61,32 @@ h2 {
     text-transform: uppercase;
 }
 
-.sidebar {
+/* .sidebar {
     height: 100%;
-    width: 250px;
+    width: 25rem;
     position: fixed;
     z-index: 1;
     top: 0;
-    left: 70px;
+    left: 7rem;
     background-color: purple;
     overflow-x: hidden;
-    box-shadow: 0px 5px 20px 10px #aaaaaa;
-}
+    box-shadow: 0px .5rem 2rem 1rem #aaaaaa;
+} */
 
-.sidebarWrapper {
+/* .sidebarWrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-.profilename {
+} */
+.profile-name {
     background-color: purple;
     color: whitesmoke;
     text-align: center;
     font-family: 'Meddon', cursive;
     font-size: 1.2rem;
 }
-.menu-nav {
+
+.nav-menu {
     margin-top: 1rem;
 }
 
@@ -76,21 +95,22 @@ h2 {
     margin-left: -1.3rem;
 }
 
-.menu-nav ul {
+/* .nav-menu ul {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding: 20px 30px;
+    padding: 2rem 3rem;
     background: #fff none repeat scroll 0 0;
     list-style-type: none;
     
 }
 
-.menu-nav ul li {
+.nav-menu ul li {
     text-align: center;
     text-transform: uppercase;
-    font: 900 13px "Titillium Web",serif;
-}
+    font: 900 1.3rem "Titillium Web",serif;
+    
+} */
 
 .row>* {
     padding-right: 0;
@@ -98,68 +118,144 @@ h2 {
 }
 
 
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+}
 
 .sidebar a {
-    padding: 6px 8px 6px 16px;
+    padding: .6rem .8rem .6rem 1.6rem;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 2.5rem;
     color: black;
     display: block;
-    font: 900 .9rem "Titillium Web",serif;
+    font: 900 1.2rem "Titillium Web", serif;
     line-height: 2;
 }
 
 .btn {
     background-color: #9c27b0;
-    color:#fff;
+    color: #fff;
 }
 
 .btn:hover {
-    color:#9c27b0;
+    color: #9c27b0;
 }
 
 .sidebar a:hover {
     color: plum;
 }
 
-.list-unstiled {
+.nav-wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+.list-unstyled {
     list-style-type: none;
     display: flex;
     flex-direction: row;
     background-color: white;
 }
 
-main {
-    margin-left: 400px;
-    padding: 0px 10px;
-    width: 90%;
-}
 
-section {
-    padding: 1.5rem;
-}
 
 .body-margin {
     margin-top: 3rem;
 }
 
 .user-pic {
-    width: 200px;
+    width: 20rem;
     height: auto;
     border-radius: 50%;
-    margin:0 auto;
+    margin: 0 auto;
     margin-top: 3rem;
 }
+
 .section-title span {
     color: #969696;
     font: 500 1.4rem open sans, sans-serif;
 }
 
+
+#viewport {
+    padding-left: 250px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#content {
+    width: 100%;
+    position: relative;
+    margin-right: 0;
+}
+
+/* Sidebar Styles TESTING */
+
+#sidebar {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 250px;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #37474F;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#sidebar header {
+    background-color: #263238;
+    font-size: 20px;
+    line-height: 52px;
+    text-align: center;
+}
+
+#sidebar header a {
+    color: #fff;
+    display: block;
+    text-decoration: none;
+}
+
+#sidebar header a:hover {
+    color: #fff;
+}
+
+#sidebar .nav {}
+
+#sidebar .nav a {
+    background: none;
+    border-bottom: 1px solid #455A64;
+    color: #CFD8DC;
+    font-size: 14px;
+    padding: 16px 24px;
+}
+
+#sidebar .nav a:hover {
+    background: none;
+    color: #ECEFF1;
+}
+
+#sidebar .nav a i {
+    margin-right: 16px;
+}
+
+
+
+
+
 @media screen and (max-height: 450px) {
     .sidebar {
-        padding-top: 15px;
+        padding-top: 1.5rem;
     }
+
     .sidebar a {
-        font-size: 18px;
+        font-size: 1.8rem;
     }
 }
