@@ -1,12 +1,21 @@
-body {
-    background-color: rgb(215, 215, 215);
-    background-size: 44.5rem;
-    background-position: top;
+html {
+    background-image: url('/images/background.webp');
+    background-repeat: repeat;
+    background-position: right;
     background-attachment: fixed;
-    background-repeat: no-repeat;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-size: cover;
+}
+
+body {
+
+    background-image: url('/images/background.webp');
+    background-repeat: repeat;
+    background-position: right;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Titillium Web', sans-serif;
     font-size: 1.6rem;
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 hero {
@@ -18,16 +27,40 @@ hero {
     position: relative;
 }
 
-.hero-image {
-    background-image: url('/images/background.webp');
-    height: 100vh;
-    margin-top: 58px;
+h1 {
+    font-size: 3rem;
+}
+
+.edit-post {
+    padding: 4rem;
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.6); 
+}
+
+td {
+    padding: 1rem;
+}
+
+.post-info {
+    background: transparent;
 }
 
 .mask {
-    background-color: rgba(0, 0, 0, 0.6);  
-    height: 90vh; 
-    margin-top: -1rem;
+    /* background-color: rgba(0, 0, 0, 0.6);   */
+    height: 91vh;
+    margin: 0 -4rem -5rem -4rem;
+}
+
+.dashboard-back {
+    text-decoration: none;
+    color: #fff;
+    margin-left: 5rem;
+}
+
+.publish-btn {
+    margin-top: 1rem;
 }
 
 form {
@@ -36,7 +69,8 @@ form {
 }
 
 .navbar {
-    height: 5rem;
+    height: 3rem;
+    background-color: #010e30;
     margin-left: auto;
 }
 
@@ -61,29 +95,16 @@ form {
     width: auto;
 }
 
-
-a,
-p,
-button {
-    color: #26204e;
-    text-decoration: none;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    margin-top: 2rem;
+.dashboard {
+    margin-top: 8rem;
 }
 
 #logout {
     font-size: 1.5rem;
 }
 
-/* #email,
-#password,
-#login-action {
-    margin-left: 30rem;
-} */
 
 .title-login {
-    margin-left: 6rem;
     font-size: 3rem;
 }
 
@@ -95,21 +116,19 @@ button {
     font-size: 1rem;
 }
 
+#login-action,
+.signup-action {
+    margin-top: 2rem;
+    display: inline;
+}
+
 .signup-btn {
     color: white;
     border: solid white .1rem;
     margin-bottom: 1rem;
 }
 
-/* .signup-form {
-    margin-left: 50rem;
-} */
-
 .title-sign {
     font-size: 3rem;
     margin-bottom: 1rem;
 }
-
-/* #signup-data {
-    margin-left: 6rem;
-} */

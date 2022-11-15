@@ -61,33 +61,17 @@ h2 {
     text-transform: uppercase;
 }
 
-/* .sidebar {
-    height: 100%;
-    width: 25rem;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 7rem;
-    background-color: purple;
-    overflow-x: hidden;
-    box-shadow: 0px .5rem 2rem 1rem #aaaaaa;
-} */
-
-/* .sidebarWrapper {
+.sidebarWrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
-} */
+}
 .profile-name {
-    background-color: purple;
+    background-color: #9c27b0;
     color: whitesmoke;
     text-align: center;
     font-family: 'Meddon', cursive;
-    font-size: 1.2rem;
-}
-
-.nav-menu {
-    margin-top: 1rem;
+    font-size: 2rem;
 }
 
 .contact {
@@ -95,7 +79,7 @@ h2 {
     margin-left: -1.3rem;
 }
 
-/* .nav-menu ul {
+.nav {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -110,7 +94,7 @@ h2 {
     text-transform: uppercase;
     font: 900 1.3rem "Titillium Web",serif;
     
-} */
+}
 
 .row>* {
     padding-right: 0;
@@ -123,7 +107,7 @@ h2 {
     max-width: 250px;
 }
 
-.sidebar a {
+.nav a {
     padding: .6rem .8rem .6rem 1.6rem;
     text-decoration: none;
     font-size: 2.5rem;
@@ -142,7 +126,7 @@ h2 {
     color: #9c27b0;
 }
 
-.sidebar a:hover {
+.nav a:hover {
     color: plum;
 }
 
@@ -156,7 +140,43 @@ h2 {
     list-style-type: none;
     display: flex;
     flex-direction: row;
+    justify-content: center;
     background-color: white;
+    padding-bottom: 1rem;
+
+}
+
+.github-icon {
+    line-height: 2;
+    width: 4rem;
+    color:#fff;
+    font-size: 2rem;
+    border-radius: 50%;
+    background-color: rgb(47, 255, 75);
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.linkedin-icon {
+    line-height: 2;
+    width: 4rem;
+    color:#fff;
+    font-size: 2rem;
+    border-radius: 50%;
+    background-color: rgb(47, 161, 255);
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.email-icon {
+    line-height: 2;
+    width: 4rem;
+    color:#fff;
+    font-size: 2rem;
+    border-radius: 50%;
+    background-color: rgb(255, 47, 47);
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 
@@ -180,7 +200,7 @@ h2 {
 
 
 #viewport {
-    padding-left: 250px;
+    padding-left: 450px;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -198,20 +218,21 @@ h2 {
 #sidebar {
     z-index: 1000;
     position: fixed;
-    left: 250px;
+    left: 400px;
     width: 250px;
     height: 100%;
     margin-left: -250px;
     overflow-y: auto;
-    background: #37474F;
+    background: #9c27b0;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
+    box-shadow: 0px 5px 20px 10px #aaaaaa;
 }
 
 #sidebar header {
-    background-color: #263238;
+    background-color: #9c27b0;
     font-size: 20px;
     line-height: 52px;
     text-align: center;
@@ -231,15 +252,14 @@ h2 {
 
 #sidebar .nav a {
     background: none;
-    border-bottom: 1px solid #455A64;
-    color: #CFD8DC;
+    color: #000000;
     font-size: 14px;
     padding: 16px 24px;
 }
 
 #sidebar .nav a:hover {
     background: none;
-    color: #ECEFF1;
+    color: #9c27b0;
 }
 
 #sidebar .nav a i {
