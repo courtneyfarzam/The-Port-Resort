@@ -30,6 +30,13 @@
   </p>
 </div>
 
+## Screenshots
+
+![Homepage](./public/images/TPR-profile.png "Mockup")
+<br>
+<br>
+![Portfolio](./public/images/TPR-port.png "Mockup")
+
 <!-- ABOUT THE PROJECT -->
 
 ## Built With
