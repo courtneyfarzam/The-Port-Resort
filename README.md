@@ -10,7 +10,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/cmash93/The-Port-Resort">
+  <a href="https://github.com/courtneyfarzam/The-Port-Resort">
     <img src="public/images/logo.png" alt="Logo" width="180" height="180">
   </a>
 
@@ -19,14 +19,14 @@
   <p align="center" style="font-size:18px;">
     At The Port Resort, users can seamlessly create their very own portfolio website for future employers and personal use for FREE. Simply log in, create your profile, and your portfolio will be ready to view! No need to watch countless youtube videos on how to create your own. Just use The Port Resort!
     <br />
-    <a href="https://github.com/cmash93/The-Port-Resort"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/courtneyfarzam/The-Port-Resort"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://mighty-plateau-36759.herokuapp.com/" target="_blank" >Live Website</a>
+    <a href="https://the-port-resort-728023def23c.herokuapp.com/" target="_blank" >Live Website</a>
         ·
-    <a href="https://github.com/cmash93/The-Port-Resort/issues">Report Bug</a>
+    <a href="https://github.com/courtneyfarzam/The-Port-Resort/issues">Report Bug</a>
     ·
-    <a href="https://github.com/cmash93/The-Port-Resort/issues">Request Feature</a>
+    <a href="https://github.com/courtneyfarzam/The-Port-Resort/issues">Request Feature</a>
   </p>
 </div>
 
@@ -114,12 +114,12 @@ Distributed under the MIT License.
 
 ## Creators
 
-Courtney Ashley Farzam - cmash93@outlook.com    
+Courtney Ashley Farzam - courtneyfarzam@gmail.com   
 Elham Hamzapour - ehamzapour@gmail.com    
 Bryce Bann - punkrice@gmail.com    
 Jose Blay - joseblay10@gmail.com    
 
-The Port Resort: [https://github.com/cmash93/The-Port-Resort](https://github.com/cmash93/The-Port-Resort)
+The Port Resort: [https://github.com/courtneyfarzam/The-Port-Resort](https://github.com/courtneyfarzam/The-Port-Resort)
 
 <!-- ACKNOWLEDGMENTS -->
 
